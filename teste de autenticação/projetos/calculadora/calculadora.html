@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .calculator {
+        background-color: #5a5a5a;
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0);
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+
+      input[type="text"] {
+        grid-column: span 4;
+        height: 50px;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: inset -20px 20px 60px #5a5a5a,
+            inset 20px -20px 60px #ffffff;
+      }
+
+      input[type="button"] {
+        background-color: #373737;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="button"]:hover {
+        background-color: rgb(113, 113, 113);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="calculator">
+      <input type="text" id="display"/>
+      <input type="button" value="(" onclick="addToDisplay('(')" />
+      <input type="button" value=")" onclick="addToDisplay(')')" />
+      <input type="button" value="%" onclick="addToDisplay('%')" />
+      <input type="button" value="AC" onclick="limpar()" />
+      <input type="button" value="7" onclick="addToDisplay('7')" />
+      <input type="button" value="8" onclick="addToDisplay('8')" />
+      <input type="button" value="9" onclick="addToDisplay('9')" />
+      <input type="button" value="/" onclick="addToDisplay('/')" />
+      <input type="button" value="4" onclick="addToDisplay('4')" />
+      <input type="button" value="5" onclick="addToDisplay('5')" />
+      <input type="button" value="6" onclick="addToDisplay('6')" />
+      <input type="button" value="*" onclick="addToDisplay('*')" />
+      <input type="button" value="1" onclick="addToDisplay('1')" />
+      <input type="button" value="2" onclick="addToDisplay('2')" />
+      <input type="button" value="3" onclick="addToDisplay('3')" />
+      <input type="button" value="-" onclick="addToDisplay('-')" />
+      <input type="button" value="0" onclick="addToDisplay('0')" />
+      <input type="button" value="." onclick="addToDisplay('.')" />
+      <input type="button" value="=" onclick="calcular()" />
+      <input type="button" value="+" onclick="addToDisplay('+')" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
